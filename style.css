@@ -1,0 +1,174 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3FB8AF;
+    color: #FFF;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+section.welcome {
+    background-color: #FF5A5F;
+    color: #FFF;
+    padding: 50px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #3FB8AF;
+    color: #FFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #3FB8AF;
+    color: #FFF;
+    padding: 20px 0;
+    text-align: center;
+}
+/* Add this CSS code to your existing styles.css file */
+section#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    text-align: center; /* Center text horizontally */
+}
+
+.welcome {
+    max-width: 600px; /* Adjust the maximum width as needed */
+    padding: 20px;
+}
+/* Add this CSS code to your existing styles.css file */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px; /* Adjust the padding as needed */
+}
+
+.service, .practitioner {
+    margin-bottom: 20px; /* Add margin between individual services/practitioners */
+    text-align: center; /* Center text horizontally */
+}
+
+/* Add this CSS code to your existing styles.css file */
+header {
+    background-color: #3FB8AF;
+    color: #FFF;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+nav {
+    flex-grow: 1; /* Allow navigation to grow and fill available space */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align navigation links to the right */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* Adjust padding for logo to center vertically */
+.logo {
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+/* Add this CSS code to your existing styles.css file */
+header {
+    background-color: #3FB8AF;
+    color: #FFF;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+nav {
+    flex-grow: 1; /* Allow navigation to grow and fill available space */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align navigation links to the right */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* Center the logo horizontally and vertically */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Adjust padding as needed */
+}
+
+/* Make the logo bigger */
+.logo img {
+    width: 150px; /* Adjust size as needed */
+}
+
+
