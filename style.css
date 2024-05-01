@@ -170,5 +170,88 @@ nav ul li a {
 .logo img {
     width: 150px; /* Adjust size as needed */
 }
+/* Add this CSS code to your existing styles.css file */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #3FB8AF;
+    color: #FFF;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* Section styles */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Welcome section */
+.welcome {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Practitioner and service sections */
+.practitioner, .service {
+    margin-bottom: 20px;
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Footer styles */
+footer {
+    background-color: #3FB8AF;
+    color: #FFF;
+    padding: 20px 0;
+    text-align: center;
+}
 
 
