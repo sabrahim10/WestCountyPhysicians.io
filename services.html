@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - West County Physicians</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | West County Physicians</title>
+  <meta name="description" content="Psychiatric evaluation, medication management, and coordinated mental health services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <!-- Header content (same as home page) -->
-    </header>
+<body data-page="services">
+  <div id="site-header"></div>
 
-    <section class="services">
-        <h1>Our Services</h1>
-        <div class="service">
-            <h2>Psychiatric Evaluation</h2>
-            <p>Description: [Insert description]</p>
-        </div>
-        <div class="service">
-            <h2>Medication Management</h2>
-            <p>Description: [Insert description]</p>
-        </div>
-        <div class="service">
-            <h2>Individual Therapy</h2>
-            <p>Description: [Insert description]</p>
-        </div>
-        <!-- Add more services as needed -->
+  <main>
+    <section class="page-hero section">
+      <div class="shell reveal">
+        <p class="eyebrow">Services</p>
+        <h1>Structured treatment for real-world outcomes.</h1>
+        <p>
+          We provide outpatient psychiatric care designed to improve daily functioning, reduce symptom burden,
+          and support long-term stability.
+        </p>
+      </div>
     </section>
 
-    <footer>
-        <!-- Footer content (same as home page) -->
-    </footer>
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Core Services</p>
+          <h2>What we offer.</h2>
+        </div>
+        <div id="services-list" class="services-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="script.js"></script>
 </body>
 </html>
