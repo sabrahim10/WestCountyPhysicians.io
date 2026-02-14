@@ -1,257 +1,421 @@
-/* Basic styles */
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-soft: #ecf2f7;
+  --text: #1a2a3a;
+  --muted: #5f6f81;
+  --brand: #0d6e6e;
+  --brand-deep: #094e53;
+  --accent: #db8857;
+  --line: #d7e1ea;
+  --shadow: 0 18px 40px rgba(8, 40, 58, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(13, 110, 110, 0.1), transparent 40%),
+    radial-gradient(circle at 95% 12%, rgba(219, 136, 87, 0.11), transparent 45%),
+    var(--bg);
+  line-height: 1.55;
 }
 
-header {
-    background-color: #3FB8AF;
-    color: #FFF;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  line-height: 1.14;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
 }
 
-.logo img {
-    width: 100px;
+p {
+  margin-top: 0;
+  margin-bottom: 0.85rem;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.shell {
+  width: min(1120px, calc(100% - 2.4rem));
+  margin: 0 auto;
 }
 
-nav ul li a {
-    color: #FFF;
-    text-decoration: none;
-}
-
-section.welcome {
-    background-color: #FF5A5F;
-    color: #FFF;
-    padding: 50px;
-    text-align: center;
-}
-
-.cta-button {
-    background-color: #3FB8AF;
-    color: #FFF;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #3FB8AF;
-    color: #FFF;
-    padding: 20px 0;
-    text-align: center;
-}
-/* Add this CSS code to your existing styles.css file */
-section#home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Adjust the height as needed */
-    text-align: center; /* Center text horizontally */
-}
-
-.welcome {
-    max-width: 600px; /* Adjust the maximum width as needed */
-    padding: 20px;
-}
-/* Add this CSS code to your existing styles.css file */
 .section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 4.7rem 0;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: rgba(246, 248, 251, 0.86);
+  border-bottom: 1px solid rgba(215, 225, 234, 0.82);
+}
+
+.nav-shell {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.brand-mark {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.58rem;
+  background: linear-gradient(145deg, var(--brand), var(--brand-deep));
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.brand-text {
+  font-family: "Fraunces", serif;
+  font-size: 1.1rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.site-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 180ms ease;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  color: var(--brand-deep);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  padding: 0.45rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.hero {
+  padding-top: 5.7rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.2rem;
+  align-items: stretch;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  margin-bottom: 1.15rem;
+}
+
+.hero-copy p {
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.hero-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(170deg, #f8fafc, #edf3f8);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.64rem;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(140deg, var(--brand), var(--brand-deep));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(9, 78, 83, 0.22);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.section-heading {
+  margin-bottom: 1.8rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.feature-grid,
+.services-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-card,
+.service-card,
+.clinician-card,
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.feature-card p,
+.service-card p,
+.clinician-card p,
+.contact-card p {
+  color: var(--muted);
+}
+
+.clinician-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.clinician-card {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clinician-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 1px solid var(--line);
+}
+
+.text-link {
+  margin-top: 1rem;
+  display: inline-block;
+  color: var(--brand-deep);
+  font-weight: 700;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.page-hero {
+  padding-top: 5.3rem;
+}
+
+.page-hero h1 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+}
+
+.page-hero p {
+  max-width: 70ch;
+  color: var(--muted);
+}
+
+.contact-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.28rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 0.78rem;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  background: #f9fbfd;
+  padding: 0.72rem 0.82rem;
+  font: inherit;
+  color: var(--text);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(13, 110, 110, 0.2);
+  border-color: var(--brand);
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 2.2rem;
+  background: #102230;
+  color: #d8e2eb;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+.site-footer h3,
+.site-footer h4 {
+  color: #fff;
+}
+
+.site-footer a {
+  color: #d8e2eb;
+}
+
+.footer-bar {
+  margin-top: 1.3rem;
+  border-top: 1px solid rgba(216, 226, 235, 0.2);
+  padding: 0.8rem 0 1.2rem;
+  font-size: 0.9rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 960px) {
+  .hero-grid,
+  .feature-grid,
+  .services-grid,
+  .contact-layout,
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .clinician-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    padding: 0.8rem 1.2rem;
+    background: rgba(246, 248, 251, 0.98);
+    border-bottom: 1px solid var(--line);
     flex-direction: column;
-    padding: 50px 20px; /* Adjust the padding as needed */
-}
+    align-items: flex-start;
+  }
 
-.service, .practitioner {
-    margin-bottom: 20px; /* Add margin between individual services/practitioners */
-    text-align: center; /* Center text horizontally */
-}
-
-/* Add this CSS code to your existing styles.css file */
-header {
-    background-color: #3FB8AF;
-    color: #FFF;
-    padding: 20px 0;
+  .site-nav.open {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure header is above other content */
-}
+  }
 
-nav {
-    flex-grow: 1; /* Allow navigation to grow and fill available space */
-}
+  .hero,
+  .page-hero {
+    padding-top: 4.3rem;
+  }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; /* Align navigation links to the right */
-}
+  .hero-grid,
+  .feature-grid,
+  .services-grid,
+  .contact-layout,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 
-nav ul li {
-    margin-right: 20px;
-}
+  .clinician-card {
+    grid-template-columns: 72px 1fr;
+  }
 
-nav ul li a {
-    color: #FFF;
-    text-decoration: none;
-}
+  .clinician-card img {
+    width: 72px;
+    height: 72px;
+  }
 
-/* Adjust padding for logo to center vertically */
-.logo {
-    padding: 0 20px;
-}
-
-.logo img {
-    width: 100px;
-}
-/* Add this CSS code to your existing styles.css file */
-header {
-    background-color: #3FB8AF;
-    color: #FFF;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure header is above other content */
-}
-
-nav {
-    flex-grow: 1; /* Allow navigation to grow and fill available space */
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; /* Align navigation links to the right */
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #FFF;
-    text-decoration: none;
-}
-
-/* Center the logo horizontally and vertically */
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px; /* Adjust padding as needed */
-}
-
-/* Make the logo bigger */
-.logo img {
-    width: 150px; /* Adjust size as needed */
-}
-/* Add this CSS code to your existing styles.css file */
-
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header styles */
-header {
-    background-color: #3FB8AF;
-    color: #FFF;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img {
-    width: 150px;
-}
-
-nav {
-    flex-grow: 1;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #FFF;
-    text-decoration: none;
-}
-
-/* Section styles */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-/* Welcome section */
-.welcome {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Practitioner and service sections */
-.practitioner, .service {
-    margin-bottom: 20px;
-}
-
-/* Contact form */
-.contact-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-/* Footer styles */
-footer {
-    background-color: #3FB8AF;
-    color: #FFF;
-    padding: 20px 0;
-    text-align: center;
+  .section {
+    padding: 3.5rem 0;
+  }
 }
 
 

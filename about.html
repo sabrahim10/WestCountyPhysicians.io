@@ -1,40 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - West County Physicians</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | West County Physicians</title>
+  <meta name="description" content="Learn about the providers and treatment philosophy at West County Physicians.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <!-- Header content (same as home page) -->
-    </header>
+<body data-page="about">
+  <div id="site-header"></div>
 
-    <section class="about">
-        <h1>About Us</h1>
-        <div class="practitioner">
-            <img src="dr_saad.jpg" alt="Dr. Saad Khan">
-            <h2>Dr. Saad Khan</h2>
-            <p>Qualifications: [Insert qualifications]</p>
-            <p>Specialties: [Insert specialties]</p>
-        </div>
-        <div class="practitioner">
-            <img src="dr_sunna.jpg" alt="Dr. Sunna Khan">
-            <h2>Dr. Sunna Khan</h2>
-            <p>Qualifications: [Insert qualifications]</p>
-            <p>Specialties: [Insert specialties]</p>
-        </div>
-        <div class="practitioner">
-            <img src="anita.jpg" alt="Anita Khan">
-            <h2>Anita Khan</h2>
-            <p>Qualifications: [Insert qualifications]</p>
-            <p>Specialties: [Insert specialties]</p>
-        </div>
+  <main>
+    <section class="page-hero section">
+      <div class="shell reveal">
+        <p class="eyebrow">About West County Physicians</p>
+        <h1>Experienced care, tailored to each patient.</h1>
+        <p>
+          We are an outpatient psychiatry practice serving the greater St. Louis area. Our approach combines
+          attentive listening, diagnostic precision, and practical treatment planning.
+        </p>
+      </div>
     </section>
 
-    <footer>
-        <!-- Footer content (same as home page) -->
-    </footer>
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Clinical Values</p>
+          <h2>What guides our practice.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3>Respectful Communication</h3>
+            <p>We prioritize clarity and transparency so patients understand every treatment decision.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Data-Informed Decisions</h3>
+            <p>Recommendations are grounded in current psychiatric standards and individualized response.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Long-Term Partnership</h3>
+            <p>Mental health is dynamic. We adapt care plans as needs and goals evolve over time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Providers</p>
+          <h2>Meet the clinicians.</h2>
+        </div>
+        <div class="clinician-grid">
+          <article class="clinician-card reveal">
+            <img src="SaadKhan.png" alt="Portrait of Dr. Saad Khan">
+            <div>
+              <h3>Dr. Saad Khan</h3>
+              <p>Adult psychiatry, mood disorders, anxiety disorders, and personalized medication planning.</p>
+            </div>
+          </article>
+          <article class="clinician-card reveal">
+            <img src="SunnaKhan.png" alt="Portrait of Dr. Sunna Khan">
+            <div>
+              <h3>Dr. Sunna Khan</h3>
+              <p>Psychiatric assessment and evidence-based medication management with patient-centered follow-up.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="script.js"></script>
 </body>
 </html>
