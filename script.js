@@ -22,11 +22,6 @@ const serviceItems = [
       "Care plans for depression, bipolar spectrum conditions, generalized anxiety, panic, and related concerns."
   },
   {
-    title: "Adolescent & Adult Psychiatry",
-    description:
-      "Age-appropriate outpatient treatment supporting school, work, family, and social functioning."
-  },
-  {
     title: "Second Opinions",
     description:
       "Independent clinical review for patients seeking additional guidance on diagnosis or treatment direction."
@@ -76,7 +71,7 @@ function renderSharedLayout() {
         <div class="shell footer-grid">
           <div>
             <h3>West County Physicians</h3>
-            <p>Outpatient psychiatry for adolescents and adults.</p>
+            <p>Outpatient psychiatry for adults.</p>
           </div>
           <div>
             <h4>Contact</h4>
